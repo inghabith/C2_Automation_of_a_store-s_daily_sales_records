@@ -1,1 +1,2 @@
-ola = 1
+from script import registro_de_ventas
+registro_de_ventas
