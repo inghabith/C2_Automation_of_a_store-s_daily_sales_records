@@ -29,4 +29,4 @@ This part of the code is responsible for displaying all the data for all the pro
 The program adds all the subtotals for the sales of each product to a new list, then adds them up and displays them to the user via the terminal.
 
 ## Status
-This project is currently being tested and improved based on the needs of small business owners.
+>This project is currently being tested and improved based on the needs of small business owners.
