@@ -1,45 +1,46 @@
-def registro_de_ventas():
-    productos = []
-    agregar = "si"
+def sales_record(products):
+    add = "yes"
 
-    while agregar == "si":
+    while add == "yes":
         print()
-        print("     ----NUEVO PRODUCTO----")
+        print("     ----NEW PRODUCT----")
         print()
-        nombre_producto = input("Ingrese el nombre del producto:          ")
-        cantidad_producto = int(input("Ingrese la cantidad del producto:        "))
-        precio_producto = int(input("Ingrese el precio unitario del producto: "))
+        product_name = input("Enter the product name:          ")
+        product_quantity = int(
+            input("Enter the quantity of the product:        "))
+        product_price = int(input("IEnter the unit price of the product: "))
 
-
-        diccionario_produtos = {
-            "nombre": nombre_producto,
-            "cantidad": cantidad_producto,
-            "precio": precio_producto
+        products_dictionary = {
+            "name": product_name,
+            "quantity": product_quantity,
+            "price": product_price
         }
 
-        productos.append(diccionario_produtos)
-        agregar = input("Desea ingresar otra venta? si/no: ")
+        products.append(products_dictionary)
+        add = input("Would you like to enter another sale? yes/no: ")
+    return products
 
 
-    #resumen de venta
-    print ("="*60)
-    print ("                RESUMEN DE VENTAS DIARIAS")
+def total_results(products, total_a):
+    # SALES SUMMARY
+    print("="*60)
+    print("                DAILY SALES SUMMARY")
 
-    total_a = []
-    for venta in productos:
-        print("Producto:                     ", venta["nombre"])
-        print("Precio por unidad:             $", venta["precio"])
-        print("Cantidad vendida hoy:           ", venta["cantidad"], "unidades")
+    for sell in products:
+        print("Product:                     ", sell["name"])
+        print("Unite price:             $", sell["price"])
+        print("Amount sold today:           ", sell["quantity"], "units")
 
-        a = (venta["cantidad"]* venta["precio"])
-        print("Subtotal vendido por producto: $",a)
+        a = (sell["quantity"] * sell["price"])
+        print("Subtotal sold by product: $", a)
 
         print("="*60)
-        
-        total_a.append(a)   
 
-    # total recaudado en el dia
-    print ("               TOTAL RECAUDADO HOY: $" ,sum(total_a))
+        total_a.append(a)
+    return [products, total_a]
+
+
+def calculator(total_a):
+    # TOTAL COLLECTED TODAY
+    print("               TOTAL COLLECTED TODAY: $", sum(total_a))
     print("="*60)
-
-registro_de_ventas()
