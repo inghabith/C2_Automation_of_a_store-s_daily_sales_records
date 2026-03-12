@@ -6,9 +6,8 @@ def sales_record(products):
         print("     ----NEW PRODUCT----")
         print()
         product_name = input("Enter the product name:          ")
-        product_quantity = int(
-            input("Enter the quantity of the product:        "))
-        product_price = int(input("IEnter the unit price of the product: "))
+        product_quantity = int(input("Enter the quantity of the product:        "))
+        product_price = int(input("Enter the unit price of the product: "))
 
         products_dictionary = {
             "name": product_name,
@@ -18,7 +17,6 @@ def sales_record(products):
 
         products.append(products_dictionary)
         add = input("Would you like to enter another sale? yes/no: ")
-    return products
 
 
 def total_results(products, total_a):
@@ -37,7 +35,6 @@ def total_results(products, total_a):
         print("="*60)
 
         total_a.append(a)
-    return [products, total_a]
 
 
 def calculator(total_a):
