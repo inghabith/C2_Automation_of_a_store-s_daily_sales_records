@@ -11,7 +11,7 @@ Once the needs were identified, a flowchart was developed to organize and help u
 
 ## Flowchart for the Sales Record Sistem.
 
-<img width="560" height="1680" alt="Diagramas de flujo" src="https://github.com/user-attachments/assets/09bd0020-5da7-4ed2-ad28-c533ad577549" />
+<img width="560" height="1680" alt="Diagramas de flujo(1)" src="https://github.com/user-attachments/assets/e91d20fe-48a0-4bd0-b7da-a200884e76ec" />
 
 Subsequently, we proceeded to create the code that would help us make the client's requests functional.
 
