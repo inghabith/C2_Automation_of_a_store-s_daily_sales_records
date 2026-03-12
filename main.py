@@ -4,6 +4,6 @@ products = []
 
 sales_record(products)
 
-total_result = total_results(products, total_a)
+total_results(products, total_a)
 
 calculator(total_a)

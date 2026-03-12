@@ -31,11 +31,12 @@ def total_results(products, total_a):
         print("Amount sold today:         ", sell["quantity"], "units")
 
         a = (sell["quantity"] * sell["price"])
+        total_a.append(a)
         print("Subtotal sold by product: $", a)
-
+        
         print("="*60)
 
-        total_a.append(a)
+        
 
 
 def calculator(total_a):
