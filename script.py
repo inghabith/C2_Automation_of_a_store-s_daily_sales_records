@@ -48,3 +48,10 @@ def calculator(total_a):
     #Here the total_a list is used to sum all the subtotals it contains, which gives the total sales for the day. The result is then printed to the console. 💻
     print("               TOTAL COLLECTED TODAY: $", sum(total_a))
     print("="*60)
+
+
+
+"""This project is a command-line application that allows store owners to store the sales of the day and have
+a resume of them, showing names, amounts of products, amounts of sales, and the total of all daily sales.
+This project is a tool built for small store owners who need a fast and organized way to record their daily sales.
+The objective of this project is to apply fundamental programming concepts such as modular programming, use of dictionaries, and lists."""""
