@@ -24,9 +24,9 @@ The user is asked to enter the name, quantity, and value of the product sold. Th
 
 2. Sales Summary - total_results()
 This part of the code is responsible for displaying all the data for all the products entered in an organized way (names, number of product sales) on the terminal. It also calculates the total amount sold per product and prints it in the same way on the terminal.
+Also, it multiplies the quantity and price to calculate the subtotal of each product and stores it in a new list called "total_a"
 
 3. Total Daily Sales - total_a()
-The program adds all the subtotals for the sales of each product to a new list, then adds them up and displays them to the user via the terminal.
-
+This part of the code adds up the values in the list created earlier. The result represents the total sales made that day and is displayed on the screen, then the programs ends
 ## Status
 >This project is currently running and working as a fully functional solution for small business owners
