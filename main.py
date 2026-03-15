@@ -1,13 +1,13 @@
-from script import sales_record, total_results, calculator
-total_a = []
+from script import sales_record, sales_summary, calculator
+total = []
 products = []
 
 #The script functions are called. 
 sales_record(products)
 
-total_results(products, total_a)
+sales_summary(products, total)
 
-calculator(total_a)
+calculator(total)
 
 """This project is a command-line application that allows store owners to store the sales of the day and have
 a resume of them, showing names, amounts of products, amounts of sales, and the total of all daily sales.
