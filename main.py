@@ -1,12 +1,10 @@
 from script import sales_record, sales_summary, calculator
-total = []
+
 products = []
+total = []
 
-#The script functions are called. 
 sales_record(products)
-
 sales_summary(products, total)
-
 calculator(total)
 
 """This project is a command-line application that allows store owners to store the sales of the day and have

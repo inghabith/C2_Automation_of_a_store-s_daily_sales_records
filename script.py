@@ -1,3 +1,4 @@
+
 #The user is asked to enter the sale information
 def sales_record(products):
     add = "yes"
@@ -9,8 +10,30 @@ def sales_record(products):
 
         #Here the sales information is requested from the user.
         product_name = input("Enter the product name:               ")
-        product_quantity = int(input("Enter the quantity of the product:     "))
-        product_price = int(input("Enter the unit price of the product:   "))
+
+        product_quantity = 0
+        while product_quantity <= 0:
+            try:
+                product_quantity = int(input("Enter the quantity of the product:     "))
+                if product_quantity <= 0:
+                    print()
+                    print("Error, please enter a positive integer value")
+            except ValueError:
+                print()
+                print("Error, please enter a positive integer value.")
+
+        product_price = 0
+        while product_price <= 0:        
+            try:
+                product_price = float(input("Enter the unit price of the product:   "))
+                if product_price <= 0:
+                    print()
+                    print("Error, please enter a positive value")
+            except ValueError:
+                print()
+                print("Error, please enter a positive value    ")
+
+        
         product_subtotal = product_price * product_quantity #It performs a brief multiplication to calculate the subtotal of the sale for each product and the values are added to a new list called total_a
         #This dictionary stores the sales data entered by the user.
         products_dictionary = {
@@ -31,7 +54,7 @@ def sales_summary(products, total):
     #Here a variable iterates through the list with the sales values and prints them to the console.
     for iterant in products:
         print("Product:                   ", iterant["name"])
-        print("Unite price:              $", iterant["price"])
+        print("Unit price:              $", iterant["price"])
         print("Amount sold today:         ", iterant["quantity"], "units")
         print("Subtotal:                 $", iterant["subtotal"]  )
         total.append(iterant["subtotal"])
@@ -44,7 +67,7 @@ def calculator(total):
     print("               TOTAL COLLECTED TODAY: $", sum(total))
     print("="*60)
 
-
+    
 
 """This project is a command-line application that allows store owners to store the sales of the day and have
 a resume of them, showing names, amounts of products, amounts of sales, and the total of all daily sales.
